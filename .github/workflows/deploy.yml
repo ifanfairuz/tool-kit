@@ -23,15 +23,15 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      - name: install and build
-        run: |
-          npm install
-          npm run build
+      # - name: install and build
+      #   run: |
+      #     npm install
+      #     npm run build
 
       - name: Deploy
-        uses: NoahDragon/action-push-repo-as-subdirectory-in-another-repo@main
+        uses: johno/actions-push-subdirectories@master
         env:
-          API_TOKEN_GITHUB: ${{ secrets.DEPLOY_PRIVATE_KEY2 }}
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          dest-repo: 'ifanfairuz/ifanfairuz.github.io'
-          dest-folder: 'dist'
+          args: public ifanfairuz ifanfairuz.github.io master
