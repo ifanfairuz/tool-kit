@@ -31,7 +31,7 @@ jobs:
       - name: deploy
         uses: s0/git-publish-subdir-action@develop
         env:
-          REPO: git@github.com:LCP-team/lc-web-deploy.git
+          REPO: git@github.com:ifanfairuz/ifanfairuz.github.io.git
           BRANCH: master
           FOLDER: dist
           SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
