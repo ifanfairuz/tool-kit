@@ -5,8 +5,10 @@
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-        "@components/*": ["./src/components/*"],
         "@lib/*": ["./src/lib/*"],
+        "@assets/*": ["./src/assets/*"],
+        "@components/*": ["./src/components/*"],
+        "@layouts/*": ["./src/layouts/*"],
         "@views/*": ["./src/views/*"]
     }
   },
