@@ -34,4 +34,4 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: public ifanfairuz ifanfairuz.github.io master
+          args: public ifanfairuz publish master
