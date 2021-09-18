@@ -38,7 +38,7 @@ jobs:
 
       - uses: crazy-max/ghaction-github-pages@v2
         with:
-          repo: https://github.com/ifanfairuz/ifanfairuz.github.io.git
+          repo: ifanfairuz/ifanfairuz.github.io.git
           target_branch: master
           build_dir: public
         env:
