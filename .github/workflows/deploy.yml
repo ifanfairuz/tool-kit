@@ -28,10 +28,10 @@ jobs:
           npm install
           npm run build
 
-      - name: deploy
-        uses: s0/git-publish-subdir-action@develop
+      - name: Deploy
+        uses: NoahDragon/action-push-repo-as-subdirectory-in-another-repo@main
         env:
-          REPO: git@github.com:ifanfairuz/ifanfairuz.github.io.git
-          BRANCH: master
-          FOLDER: dist
-          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY2 }}
+          API_TOKEN_GITHUB: ${{ secrets.DEPLOY_PRIVATE_KEY2 }}
+        with:
+          dest-repo: 'ifanfairuz/ifanfairuz.github.io'
+          dest-folder: 'dist'
