@@ -23,24 +23,17 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
-      # - name: install and build
-      #   run: |
-      #     npm install
-      #     npm run build
-
-      # - name: deploy
-      #   uses: s0/git-publish-subdir-action@develop
-      #   env:
-      #     REPO: git@github.com:ifanfairuz/ifanfairuz.github.io.git
-      #     BRANCH: master
-      #     FOLDER: dist
-      #     SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+      - name: install and build
+        run: |
+          npm install
+          npm run build
 
       - uses: crazy-max/ghaction-github-pages@v2
         with:
           repo: ifanfairuz/ifanfairuz.github.io
           target_branch: master
-          build_dir: public
+          build_dir: dist
+          committer: Ifan Fairuz <ifanfairuz@gmail.com>
         env:
           GH_PAT: ${{ secrets.PAT }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
