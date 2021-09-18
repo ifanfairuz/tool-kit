@@ -27,7 +27,6 @@ jobs:
         run: |
           npm install
           npm run build
-          echo ${{ secrets.DEPLOY_PRIVATE_KEY }}
 
       - name: deploy
         uses: s0/git-publish-subdir-action@develop
@@ -35,4 +34,4 @@ jobs:
           REPO: git@github.com:ifanfairuz/ifanfairuz.github.io.git
           BRANCH: master
           FOLDER: dist
-          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY2 }}
