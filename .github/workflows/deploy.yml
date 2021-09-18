@@ -29,9 +29,10 @@ jobs:
       #     npm run build
 
       - name: Deploy
-        uses: johno/actions-push-subdirectories@master
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: ./
         with:
-          args: public ifanfairuz publish master
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.API_TOKEN_GITHUB }}
+          remote_url: https://github.com/ifanfairuz/ifanfairuz.github.io.git
+          target_branch: master
+          pages_directory: public
