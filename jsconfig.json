@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+        "@components/*": ["./src/components/*"],
+        "@lib/*": ["./src/lib/*"],
+        "@views/*": ["./src/views/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "public",
+    "babel.config.js",
+    "aliases.js"
+  ]
+}
