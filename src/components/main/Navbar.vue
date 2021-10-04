@@ -6,8 +6,8 @@
       </div>
       <div class="flex-none px-2 mx-2">
         <div class="items-stretch hidden lg:flex">
-          <a href="#home" class="btn btn-ghost btn-sm rounded-btn">Beranda</a>
-          <a href="#tools" class="btn btn-ghost btn-sm rounded-btn">Tools</a>
+          <component :is="navbar_parallax ? 'a' : 'router-link'" :href="navbar_parallax ? '#home' : false" :to="!navbar_parallax ? '/#home' : false" class="btn btn-ghost btn-sm rounded-btn">Beranda</component>
+          <component :is="navbar_parallax ? 'a' : 'router-link'" :href="navbar_parallax ? '#tools' : false" :to="!navbar_parallax ? '/#tools' : false" class="btn btn-ghost btn-sm rounded-btn">Tools</component>
         </div>
       </div> 
       <!-- <div class="flex flex-row space-x-1">
@@ -36,7 +36,7 @@
 <script>
 export default {
   name: 'Navbar',
-  props: ['transparent'],
+  props: ['transparent', 'navbar_parallax'],
   data: () => ({
     search: false
   }),

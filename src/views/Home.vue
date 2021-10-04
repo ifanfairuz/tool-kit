@@ -2,15 +2,15 @@
   <layout :no_navbar="true">
     
     <div id="home" class="bg-main flex flex-col h-screen">
-      <navbar :transparent="navbar_transparent" class="fixed top-0 z-30 navbar-full" />
+      <navbar :transparent="navbar_transparent" class="fixed top-0 z-30 navbar-full" :navbar_parallax="true" />
       <div class="hero text-primary-content relative flex-1">
         <div class="text-center hero-content absolute top-0 bottom-1/4">
           <div class="max-w-md">
             <h1 class="mb-5 text-5xl font-bold">
               Tools Kit
-              <h3 class="text-2xl font-normal">for you by Ifan Fairuz</h3>
+              <h3 class="text-2xl font-normal">Make your life more easy</h3>
             </h1>
-            <a href="#tools" class="btn btn-primary">Langsung Gass</a>
+            <a href="#tools" class="btn btn-primary">Get Started</a>
           </div>
         </div>
       </div>

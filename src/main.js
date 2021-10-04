@@ -7,6 +7,7 @@ Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.component('layout', () => import('@layouts/Layout.vue'));
 Vue.component('navbar', () => import('@components/main/Navbar.vue'));
+Vue.component('drawer', () => import('@components/main/Drawer.vue'));
 Vue.component('card', () => import('@components/main/Card.vue'));
 Vue.component('foot', () => import('@components/main/Footer.vue'));
 

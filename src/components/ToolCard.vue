@@ -6,7 +6,7 @@
         {{ tool.description }}
       </span>
     </p>
-    <router-link :to="`/tool/${tool.id}`" class="btn btn-primary">Sikat !!</router-link>
+    <router-link :to="`/tool/${tool.id}`" class="btn btn-primary">Use</router-link>
   </card>
 </template>
 
